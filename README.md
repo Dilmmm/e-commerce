@@ -3,6 +3,7 @@
 Création de la base de données MySQL:
 
 CREATE DATABASE `NomBDD`;
+
 USE `NomBDD(même qu'au dessus)`;
 
 CREATE TABLE User (
