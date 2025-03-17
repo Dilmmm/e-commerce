@@ -71,6 +71,6 @@ CREATE TABLE OrderItem (
 
 ######## Connexion à la base de données ########
 
-Créer un fichier application-local.properties à la cet emplacement: ecommerce-backend\src\main\resources\config\
+Créer un fichier application-local.properties à la racine de cet emplacement: ecommerce-backend\src\main\resources\config\
 Copier le contenu du fichier config\application-local.properties.example et le coller dans "application-local.properties"
 en remplaçant les champs par vos logs de connexion à la BDD
