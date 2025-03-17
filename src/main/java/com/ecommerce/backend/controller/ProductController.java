@@ -1,5 +1,7 @@
 package com.ecommerce.backend.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +24,9 @@ public class ProductController {
 
     // Tous les produits
     @GetMapping("/all")
-    public Iterable<Product> getAllProducts() {
-        return productService.findAll();
+    public ResponseEntity<List<Product>> getAllProducts() {
+        List<Product> products = productService.findAll();
+        return ResponseEntity.ok(products);
     }
 
     // Produit par id

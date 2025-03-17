@@ -1,5 +1,6 @@
 package com.ecommerce.backend.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +15,16 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public Iterable<Product> findAll() {
-        return productRepository.findAll();
+    public List<Product> findAll() {
+        return (List<Product>) productRepository.findAll();
     }
 
     public Optional<Product> findById(Integer id) {
         return productRepository.findById(id);
     }
 
-    public <S extends Product> S save(S entity) {
-        return productRepository.save(entity);
+    public Product save(Product product) {
+        return productRepository.save(product);
     }
 
 }
