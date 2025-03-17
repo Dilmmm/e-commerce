@@ -1,5 +1,7 @@
 package com.ecommerce.backend.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +24,9 @@ public class CategoryController {
 
     // Toutes les catégories
     @GetMapping("/all")
-    public Iterable<Category> getAllCategories() {
-        return categoryService.findAll();
+    public ResponseEntity<List<Category>> getAllCategories() {
+        List<Category> categories = categoryService.findAll();
+        return ResponseEntity.ok(categories);
     }
 
     // Catégorie par id

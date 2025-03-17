@@ -1,5 +1,7 @@
 package com.ecommerce.backend.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +24,9 @@ public class CartController {
 
     // Tous les paniers
     @GetMapping("/all")
-    public Iterable<Cart> getAllCart() {
-        return cartService.findAll();
+    public ResponseEntity<List<Cart>> getAllCarts() {
+        List<Cart> carts = cartService.findAll();
+        return ResponseEntity.ok(carts);
     }
 
     // Panier par id
