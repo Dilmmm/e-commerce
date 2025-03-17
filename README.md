@@ -1,5 +1,32 @@
 #Application e-commerce Java Spring Boot/Angular
 
+# E-Commerce Backend
+
+Ce projet est un backend pour une application e-commerce, développé avec Spring Boot. 
+Il gère les utilisateurs, les catégories, les produits, les paniers, les commandes, et plus encore. 
+L'objectif est de fournir une API RESTful robuste et évolutive pour un site de commerce en ligne.
+
+## Fonctionnalités
+- Gestion des utilisateurs (authentification, rôles : client, administrateur, employé)
+- Gestion des catégories et des produits
+- Gestion des paniers et des commandes
+- API RESTful avec validation des données
+- Connexion à une base de données MySQL
+
+## Prérequis
+- Java 21 (LTS)
+- Maven 3.x
+- MySQL 8.x
+- Un IDE comme IntelliJ IDEA ou VS Code
+- Git
+
+## Installation
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/Dilmmm/e-commerce.git
+   cd e-commerce
+
 Création de la base de données MySQL:
 
 CREATE DATABASE `NomBDD`;
