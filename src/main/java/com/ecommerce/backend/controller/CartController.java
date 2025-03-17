@@ -10,34 +10,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ecommerce.backend.model.Category;
-import com.ecommerce.backend.service.CategoryService;
+import com.ecommerce.backend.model.Cart;
+import com.ecommerce.backend.service.CartService;
 
 @RestController
-@RequestMapping("/api/category")
-public class CategoryController {
+@RequestMapping("/api/cart")
+public class CartController {
 
     @Autowired
-    private CategoryService categoryService;
+    private CartService cartService;
 
-    // Toutes les catégories
+    // Tous les paniers
     @GetMapping("/all")
-    public Iterable<Category> getAllCategories() {
-        return categoryService.findAll();
+    public Iterable<Cart> getAllCart() {
+        return cartService.findAll();
     }
 
-    // Catégorie par id
+    // Panier par id
     @GetMapping("/{id}")
-    public ResponseEntity<Category> getCategoryById(@PathVariable Integer id) {
-        return categoryService.findById(id)
+    public ResponseEntity<Cart> getCartById(@PathVariable Integer id) {
+        return cartService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Ajouter une catégorie
+    // Ajouter un panier
     @PostMapping("/add")
-    public ResponseEntity<Category> createCategory(@RequestBody Category category) {
-        Category savedCategory = categoryService.save(category);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedCategory);
+    public ResponseEntity<Cart> createCart(@RequestBody Cart cart) {
+        Cart savedCart = cartService.save(cart);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedCart);
     }
 }
