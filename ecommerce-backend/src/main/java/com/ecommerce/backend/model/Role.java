@@ -3,5 +3,9 @@ package com.ecommerce.backend.model;
 public enum Role {
     CUSTOMER,
     ADMIN,
-    EMPLOYEE
+    EMPLOYEE;
+
+    public static Role defaultRole() {
+        return CUSTOMER;
+    }
 }

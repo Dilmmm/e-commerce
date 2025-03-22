@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Orders")
+@Table(name = "orders")
 public class Order {
 
     @Id
@@ -16,7 +16,7 @@ public class Order {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(name = "total_amount", nullable = false)
+    @Column(name = "total_amount", nullable = false, precision = 10, scale = 2)
     private BigDecimal totalAmount;
 
     @Column(name = "order_date", nullable = false, updatable = false)
@@ -24,7 +24,7 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private OrderStatus status;
+    private OrderStatus status = OrderStatus.defaultStatus();
 
     public Order() {
     }

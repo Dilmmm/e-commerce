@@ -4,5 +4,9 @@ public enum OrderStatus {
     PENDING,
     PROCESSING,
     COMPLETED,
-    CANCELLED
+    CANCELLED;
+
+    public static OrderStatus defaultStatus() {
+        return PENDING;
+    }
 }

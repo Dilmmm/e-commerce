@@ -3,6 +3,7 @@ package com.ecommerce.backend.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "cart_item")
 public class CartItem {
 
     @Id
