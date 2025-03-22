@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.backend.model.Product;
 import com.ecommerce.backend.service.ProductService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/product")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
 
     @Autowired
