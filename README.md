@@ -1,6 +1,6 @@
 # Application e-commerce Java Spring Boot/Angular
 
-# E-Commerce Backend
+# E-Commerce backend
 
 Ce projet est un backend pour une application e-commerce, développé avec Spring Boot. 
 Il gère les utilisateurs, les catégories, les produits, les paniers, les commandes etc... 
@@ -101,3 +101,6 @@ CREATE TABLE order_item (
 Créer un fichier application-local.properties à la racine de cet emplacement: \src\main\resources\config\
 Copier le contenu du fichier config\application-local.properties.example et le coller dans "application-local.properties"
 en remplaçant les champs par vos logs de connexion à la BDD
+
+# E-Commerce frontend
+...
