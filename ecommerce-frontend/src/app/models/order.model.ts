@@ -3,7 +3,7 @@ import { UserModel } from "./user.model";
 
 export interface OrderModel {
     id: number;
-    userId: UserModel;
+    user: UserModel;
     totalAmount: number;
     orderDate: string;
     status: OrderStatusEnum;

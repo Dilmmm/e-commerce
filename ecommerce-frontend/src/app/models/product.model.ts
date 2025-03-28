@@ -6,6 +6,6 @@ export interface ProductModel {
     description: string;
     price: number;
     stockQuantity: number;
-    categoryId: CategoryModel;
+    category: CategoryModel;
     creationDate: string;
 }

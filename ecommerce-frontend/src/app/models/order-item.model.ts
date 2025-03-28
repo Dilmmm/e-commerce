@@ -3,8 +3,8 @@ import { ProductModel } from "./product.model";
 
 export interface OrderItemModel {
     id: number;
-    orderId: OrderModel;
-    productId: ProductModel;
+    order: OrderModel;
+    product: ProductModel;
     quantity: number;
     price: number;
 }
